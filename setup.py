@@ -2,21 +2,21 @@ import os
 from setuptools import setup, find_packages
 
 # Read requirements from requirements.txt
-with open('requirements.txt') as f:
+with open("requirements.txt") as f:
     requirements = f.read().splitlines()
 
 # Read long description from README.md
-with open('README.md', 'r', encoding='utf-8') as f:
+with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
 
 setup(
-    name="kafka-message-producer",
+    name="kafka-shell",
     version="0.1.0",
-    description="A Kafka message producer with comprehensive error handling and logging",
+    description="A Python CLI tool that simplifies Kafka interaction from your terminal",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="Momar T. Cisse",
+    author_email="momar@thepinkchannel.com",
     python_requires=">=3.12.0",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
@@ -29,11 +29,11 @@ setup(
         "Programming Language :: Python :: 3.12",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
-    keywords="kafka, producer, messaging, confluent",
+    keywords="kafka, cli, shell, messaging, confluent",
     project_urls={
-        "Bug Tracker": "https://github.com/yourusername/kafka-message-producer/issues",
-        "Documentation": "https://github.com/yourusername/kafka-message-producer",
-        "Source Code": "https://github.com/yourusername/kafka-message-producer",
+        "Bug Tracker": "https://github.com/blvckpvblo/kafka-shell/issues",
+        "Documentation": "https://github.com/blvckpvblo/kafka-shell",
+        "Source Code": "https://github.com/blvckpvblo/kafka-shell",
     },
     include_package_data=True,
     zip_safe=False,
@@ -46,8 +46,7 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "kafka-producer=producer.kafka_producer:main",
+            "kafka-shell=main:main",
         ],
     },
 )
-
